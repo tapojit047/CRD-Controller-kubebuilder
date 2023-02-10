@@ -1,0 +1,27 @@
+# permissions for end users to view alchemists.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: alchemist-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: crd-controller-kubebuilder
+    app.kubernetes.io/part-of: crd-controller-kubebuilder
+    app.kubernetes.io/managed-by: kustomize
+  name: alchemist-viewer-role
+rules:
+- apiGroups:
+  - fullmetal.com.my.domain
+  resources:
+  - alchemists
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - fullmetal.com.my.domain
+  resources:
+  - alchemists/status
+  verbs:
+  - get

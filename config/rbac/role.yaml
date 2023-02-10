@@ -1,0 +1,51 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - fullmetal.com.my.domain
+  resources:
+  - alchemists
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - fullmetal.com.my.domain
+  resources:
+  - alchemists/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - fullmetal.com.my.domain
+  resources:
+  - alchemists/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - fullmetal.com.my.domain
+  resources:
+  - customs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - fullmetal.com.my.domain
+  resources:
+  - customs/status
+  verbs:
+  - get

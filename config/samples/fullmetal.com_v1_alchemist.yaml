@@ -2,10 +2,11 @@ apiVersion: fullmetal.com.my.domain/v1
 kind: Alchemist
 metadata:
   name: elric
+  namespace: demo
 spec:
   deploymentName: alchemist
   replicas: 3
   image: tapojit047/api-server
-  containerPort: 30000
-  servicePort: 30001
-  targetPort: 30002
+  containerPort: 8000
+  servicePort: 8000
+  targetPort: 8000

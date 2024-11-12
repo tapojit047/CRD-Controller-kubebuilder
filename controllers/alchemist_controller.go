@@ -47,6 +47,8 @@ var (
 //+kubebuilder:rbac:groups=fullmetal.com.my.domain,resources=alchemists/finalizers,verbs=update
 //+kubebuilder:rbac:groups=fullmetal.com.my.domain,resources=customs,verbs=get;list;watch;create;update;patch;delete
 //+kubebuilder:rbac:groups=fullmetal.com.my.domain,resources=customs/status,verbs=get
+//+kubebuilder:rbac:groups="",resources=services,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.
